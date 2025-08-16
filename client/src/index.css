@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-chat-bg text-chat-text font-sans;
+  }
+}
+
+@layer components {
+  .chat-input {
+    @apply w-full px-4 py-3 border border-chat-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200;
+  }
+  
+  .chat-button {
+    @apply px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-all duration-200 transform hover:scale-105 active:scale-95;
+  }
+  
+  .chat-card {
+    @apply bg-chat-card border border-chat-border rounded-xl shadow-sm hover:shadow-md transition-all duration-200;
+  }
+  
+  .message-bubble {
+    @apply max-w-xs lg:max-w-md px-4 py-2 rounded-2xl break-words;
+  }
+  
+  .message-sent {
+    @apply bg-primary-500 text-white ml-auto;
+  }
+  
+  .message-received {
+    @apply bg-gray-100 text-chat-text;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
